@@ -27,7 +27,7 @@ func (s *TODOService) CreateTODO(ctx context.Context, subject, description strin
 	)
 
 	// TODOを保存する際に利用するメソッドは、PrepareContextメソッドやExecContextメソッドを使う
-	result, err := s.db.ExecContext(ctx, insert, confirm)
+	result, err := s.db.ExecContext(ctx, insert, subject, description)
 	if err != nil {
 		return nil, err
 	}
