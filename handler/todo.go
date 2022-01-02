@@ -20,6 +20,12 @@ func NewTODOHandler(svc *service.TODOService) *TODOHandler {
 	}
 }
 
+// ServeHTTPメソッドの中でHTTPメソッドがPOSTの場合を判定する
+// CreateTODORequestにJSON Decodeを行う
+// Subjectがからの場合をif文で判定する
+// 空の場合は400BadRequestとHTTPResponseを返す
+// 空でない場合は引数のrからr.Context()を呼び出し、DBにTODOを保存する
+// 保存したTODOをCreateTODOResponseに代入してJSONEncodeを行って、HTTPResponseを返す
 func (h *TODOHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	
 }

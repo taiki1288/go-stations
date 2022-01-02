@@ -9,7 +9,6 @@ import (
 	"github.com/TechBowl-japan/go-stations/db"
 	"github.com/TechBowl-japan/go-stations/handler"
 	"github.com/TechBowl-japan/go-stations/service"
-	"golang.org/x/sys/windows/svc"
 )
 
 func main() {
